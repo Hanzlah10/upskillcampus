@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+
+    <!-- Bootstrap CSS -->
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+
+/* Custom CSS for URL Shortener Website */
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    padding-top: 50px;
+}
+
+/* Header Styles */
+h1 {
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px #dcdde1;
+}
+
+/* Form Styles */
+.form-floating label {
+    color: #636e72;
+}
+
+.form-control {
+    border-color: #bdc3c7;
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Shortened URL Styles */
+.short-url {
+    color: #27ae60;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-md-2, .col-md-8 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+/* Updated CSS for URL Shortener Website */
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animated HR Styles */
+.hr-animated {
+    border: none;
+    height: 1px;
+    background-color: #007bff;
+    margin: 20px 0;
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Short URL Container Styles */
+.short-url-container {
+    text-align: center;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.short-url-link {
+    color: #0761c2;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #a2a3a9;
+}
+
+.short-url-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+    </style>
+    <title>{% block title %} {% endblock %}</title>
+   
+  </head>
+  <body>
+    <div class="container mt-3">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  </body>
+</html>
